@@ -367,7 +367,8 @@ def install(pkgs=None,  # pylint: disable=R0912,R0913,R0914
             env_vars=None,
             use_vt=False,
             trusted_host=None,
-            no_cache_dir=False):
+            no_cache_dir=False,
+            **kwargs):
     '''
     Install packages with pip
 

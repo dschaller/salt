@@ -55,7 +55,8 @@ def managed(name,
             no_use_wheel=False,
             pip_upgrade=False,
             pip_pkgs=None,
-            process_dependency_links=False):
+            process_dependency_links=False,
+            **kwargs):
     '''
     Create a virtualenv and optionally manage it with pip
 
@@ -282,7 +283,8 @@ def managed(name,
             no_deps=no_deps,
             proxy=proxy,
             use_vt=use_vt,
-            env_vars=env_vars
+            env_vars=env_vars,
+            **kwargs
         )
         ret['result'] &= _ret['retcode'] == 0
         if _ret['retcode'] > 0:
